@@ -6,6 +6,20 @@
 	<artifactId>loja</artifactId>
 	<version>1.0.0</version>
 	
+	
+	<build>
+		<finalName>loja</finalName>
+	  <plugins>
+	  	<plugin>
+	  		<artifactId>maven-compiler-plugin</artifactId>
+	  		<configuration>
+	  			<source>8</source>
+	  			<target>8</target>
+	  		</configuration>
+	  	</plugin>
+	  </plugins>
+	</build>
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -13,5 +27,24 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+		    <groupId>com.thoughtworks.xstream</groupId>
+		    <artifactId>xstream</artifactId>
+		    <version>1.4.15</version>
+		</dependency>
 	</dependencies>
+	
+	<repositories>
+		<repository>
+        <id>spring-repo</id>
+        <url>https://repo.spring.io/release</url>
+        <releases>
+           <enabled>true</enabled>
+        </releases>
+        <snapshots>
+          <enabled>false</enabled>
+       </snapshots>
+     </repository>
+	</repositories>
 </project>
